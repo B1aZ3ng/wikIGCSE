@@ -5,10 +5,12 @@
   <title>Redirecting...</title>
   <script>
     (function() {
+      var ip = '27.125.172.55';
       var path = window.location.pathname.replace(/^\/wikIGCSE/, '');
       path = decodeURIComponent(path);
-      var target = 'http://27.125.172.55/mediawiki/index.php/' + path;
+      var target = 'http://' + ip + '/mediawiki/index.php/' + path;
       window.location.replace(target);
+      window.location.replace('http://'+ip);
     })();
   </script>
 </head>
