@@ -1,10 +1,19 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Redirecting...</title>
-    <script type="text/javascript" src="redirect.js"></script>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <script>
+    (function() {
+      var path = window.location.pathname.replace(/^\/wikIGCSE/, '');
+      path = decodeURIComponent(path);
+      var target = 'http://27.125.172.55/mediawiki/index.php/' + path;
+      window.location.replace(target);
+    })();
+  </script>
 </head>
 <body>
     <h1>Redirecting...</h1>
-    <p>If you are not redirected, <a href="http://27.125.172.55/">click here</a>.</p>
+  <p>Redirecting you to the original wiki...</p>
 </body>
 </html>
